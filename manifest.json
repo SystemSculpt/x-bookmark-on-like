@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Bookmark on Like for X",
+  "description": "Automatically bookmarks posts when you like them on X.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://twitter.com/*",
+        "*://*.twitter.com/*",
+        "*://x.com/*",
+        "*://*.x.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
